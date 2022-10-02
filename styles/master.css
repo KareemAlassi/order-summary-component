@@ -1,0 +1,162 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--Desaturated-blue);
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.bg-image {
+    /* background: url('/images/pattern-background-mobile.svg') no-repeat center/cover; */
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-change {
+    background-color: transparent;
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--bright-blue);
+    color: #fff;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-primary:hover,
+.btn-change:hover {
+    opacity: 0.8;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+}
+
+.btn-secondary:hover {
+    color: var(--Dark-blue);
+}
+
+.container .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+    border-radius: 30px;
+    padding-bottom: 10px;
+}
+
+.container>p {
+    padding: 0 20px;
+}
+
+.container>img {
+    border-radius: 30px 30px 0 0;
+}
+
+.plan-type {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--pale-blue);
+    width: 90%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    align-items: center;
+}
+
+article img {
+    margin-right: 10px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 30px;
+}
+
+h1 {
+    color: var(--Dark-blue);
+    margin: 10px 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 300px
+    }
+    .bg-image {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 376px) {
+    .container {
+        max-width: 400px
+    }
+}
